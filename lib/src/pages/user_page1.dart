@@ -16,7 +16,7 @@ class UserPage1 extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text('${Get.parameters['uid']}'),
+            Text('${Get.parameters['id']}'),
             Text('${Get.parameters['name']}'),
             Text('${Get.parameters['age']}'),
             ElevatedButton(

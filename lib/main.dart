@@ -55,7 +55,7 @@ class MyApp extends StatelessWidget {
           transition: Transition.zoom,
         ),
         GetPage(
-          name: '/user',
+          name: '/user/:id',
           page: ()=>UserPage1(),
           transition: Transition.zoom,
         ),
