@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:flutter_getx_example/src/pages/normal/second_page.dart';
+import 'package:flutter_getx_example/src/pages/named/second_page.dart';
 
-class FirstPage extends StatelessWidget {
-  const FirstPage({Key? key}) : super(key: key);
+class FirstNamedPage extends StatelessWidget {
+  const FirstNamedPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('First Page'),
+        title: Text('First Named Page'),
       ),
       body: Center(
         child: Column(
@@ -17,7 +17,10 @@ class FirstPage extends StatelessWidget {
             children: [
               ElevatedButton(
                 onPressed: () {
-                  Get.to(()=>SecondPage());
+                  //Get.toNamed('/second');
+
+                  // previous를 없애고, /second로 넘어간다.
+                  Get.offNamed('/second');
                 },
                 child: Text('Next Page'),
               ),

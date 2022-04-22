@@ -26,9 +26,50 @@ class MyHomePage extends StatelessWidget {
               },
               child: Text('Normal Route'),
             ),
+            ElevatedButton(
+              onPressed: () {
+                // Navigator.push(context, MaterialPageRoute(
+                //   builder: (_) => FirstPage(),
+                // ));
+
+                // 해당 page로 이동한다.
+                Get.toNamed("/first");
+              },
+              child: Text('Named Route'),
+            ),
+            ElevatedButton(
+              onPressed: () {
+                Get.toNamed(
+                    "/next1",
+                    arguments: {"name": "테스트1", "age": "33"});
+              },
+              child: Text('Argument Route1'),
+            ),
+            ElevatedButton(
+              onPressed: () {
+                Get.toNamed(
+                    "/next2",
+                    arguments: User(name: "테스트2", age: 45));
+              },
+              child: Text('Argument Route2'),
+            ),
+            ElevatedButton(
+              onPressed: () {
+                Get.toNamed(
+                    "/user/28357?name=User1&age=55");
+              },
+              child: Text('Dynamic Web Route'),
+            ),
           ],
         ),
       ),
     );
   }
+}
+
+class User {
+  String name;
+  int age;
+
+  User({required this.age, required this.name});
 }
