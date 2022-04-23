@@ -5,8 +5,8 @@ class CountControllerWithGetX extends GetxController {
   int _count = 0;
   int get count => _count;
 
-  void increase() {
+  void increase(String id) {
     _count++;
-    update();
+    update([id]);
   }
 }
