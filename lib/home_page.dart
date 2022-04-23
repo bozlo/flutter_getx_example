@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_getx_example/src/pages/dependencys/dependency_manage_page.dart';
 import 'package:flutter_getx_example/src/pages/normal/first_page.dart';
 import 'package:get/get.dart';
 import 'package:flutter_getx_example/src/simple_state_manager.dart';
@@ -73,6 +74,12 @@ class MyHomePage extends StatelessWidget {
                 Get.to(()=>ReactiveStateManagePage());
               },
               child: Text('Reactive Statement'),
+            ),
+            ElevatedButton(
+              onPressed: () {
+                Get.to(()=>DependencyManagePage());
+              },
+              child: Text('Dependency Page'),
             ),
           ],
         ),
