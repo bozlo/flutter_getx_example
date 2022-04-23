@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_getx_example/src/pages/normal/first_page.dart';
 import 'package:get/get.dart';
+import 'package:flutter_getx_example/src/simple_state_manager.dart';
 
 class MyHomePage extends StatelessWidget {
   const MyHomePage({Key? key}) : super(key: key);
@@ -59,6 +60,12 @@ class MyHomePage extends StatelessWidget {
                     "/user/28357?name=User1&age=55");
               },
               child: Text('Dynamic Web Route'),
+            ),
+            ElevatedButton(
+              onPressed: () {
+                Get.to(()=>SimpleStateManagePage());
+              },
+              child: Text('Simple State Manage'),
             ),
           ],
         ),
