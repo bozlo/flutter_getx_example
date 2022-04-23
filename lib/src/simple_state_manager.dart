@@ -11,6 +11,7 @@ class SimpleStateManagePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    print("Should not be called multiple times");
     // GetX 사용 선언 -- 아무곳에서 해도 된다.
     Get.put(CountControllerWithGetX());
     return Scaffold(

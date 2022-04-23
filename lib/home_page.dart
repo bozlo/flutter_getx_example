@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_getx_example/src/pages/normal/first_page.dart';
 import 'package:get/get.dart';
 import 'package:flutter_getx_example/src/simple_state_manager.dart';
+import 'package:flutter_getx_example/src/reactive_state_manager.dart';
 
 class MyHomePage extends StatelessWidget {
   const MyHomePage({Key? key}) : super(key: key);
@@ -66,6 +67,12 @@ class MyHomePage extends StatelessWidget {
                 Get.to(()=>SimpleStateManagePage());
               },
               child: Text('Simple State Manage'),
+            ),
+            ElevatedButton(
+              onPressed: () {
+                Get.to(()=>ReactiveStateManagePage());
+              },
+              child: Text('Reactive Statement'),
             ),
           ],
         ),
