@@ -60,6 +60,16 @@ class DependencyManagePage extends StatelessWidget {
                       }));
                 },
                 child: Text('Get Create')),
+            ElevatedButton(
+                onPressed: (){
+                  Get.toNamed("/binding");
+                },
+                child: Text('Binding')),
+            ElevatedButton(
+                onPressed: (){
+                  Get.toNamed("/binding2");
+                },
+                child: Text('Binding2')),
           ],
         ),
       ),
