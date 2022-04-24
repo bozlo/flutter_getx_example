@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_getx_example/src/controller/dependency_controller.dart';
+import 'package:flutter_getx_example/src/controller/getx_service.dart';
 import 'package:flutter_getx_example/src/pages/dependencys/get_lazyput.dart';
 import 'package:get/get.dart';
 import 'package:flutter_getx_example/src/pages/dependencys/get_put.dart';
+import 'package:flutter_getx_example/src/pages/getx_service_page.dart';
 
 class DependencyManagePage extends StatelessWidget {
   const DependencyManagePage({Key? key}) : super(key: key);
@@ -70,6 +72,19 @@ class DependencyManagePage extends StatelessWidget {
                   Get.toNamed("/binding2");
                 },
                 child: Text('Binding2')),
+            ElevatedButton(
+                onPressed: (){
+                  Get.toNamed("/binding3");
+                },
+                child: Text('Binding_Permanent')),
+            ElevatedButton(
+                onPressed: (){
+                  Get.to(()=>GetxServiceTestPage(),
+                  binding: BindingsBuilder(()=>{
+                    Get.lazyPut<GetxServiceTestService>(() => GetxServiceTestService()),
+                  }));
+                },
+                child: Text('GetX Service')),
           ],
         ),
       ),
